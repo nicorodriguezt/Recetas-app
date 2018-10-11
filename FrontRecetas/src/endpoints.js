@@ -8,6 +8,9 @@ export const ENDPOINTS = {
   production: {
     product: '/'
   },
+  test:{
+    product:'/'
+  },
   getURL( service )  {
     let env = process.env.NODE_ENV;
     let environment= this;
@@ -16,7 +19,7 @@ export const ENDPOINTS = {
     if( !environment[env] )
       throw 'Environment not found';
     
-    console.log(`CurrentEndpoint: ${environment[env].product}`)
+    console.log(`CurrentEndpoint: ${environment[env].product}`);
     return environment[env][service];
   }
 }
