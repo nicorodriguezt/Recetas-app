@@ -48,7 +48,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+    import {Receta} from "../resources/Receta";
 
     export default {
         name: "infoReceta",
@@ -65,9 +65,8 @@
           }  
         },
         mounted() {
-            axios.create({withCredentials: true}).get('http://localhost:3000/receta/verReceta/' + this.recetaElegida).then(datos => {
+            Receta.findOne(this.recetaElegida).then(datos => {
                 this.infoReceta = datos.data;
-
                 this.infoReceta.Nombre = this.infoReceta.Nombre[0].toUpperCase() +  this.infoReceta.Nombre.substr(1).toLowerCase();
                 this.infoReceta.Ingredientes.forEach(function (element) {
                     element.Ingrediente.Nombre = element.Ingrediente.Nombre[0].toUpperCase() + element.Ingrediente.Nombre.substr(1).toLowerCase();

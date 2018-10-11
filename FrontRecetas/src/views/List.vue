@@ -51,8 +51,8 @@
 </template>
 
 <script>
-    import axios from 'axios';
-    // import {apiURL} from "../environment/globalConfig";
+    import {Receta} from "../resources/Receta";
+
 
     export default {
         props: ['busquedaProp'],
@@ -77,7 +77,7 @@
                         Saltar: this.skip,
                         Limite: this.limit
                     };
-                    axios.create({withCredentials: true}).get('http://localhost:3000/receta/find/', {params}).then(datos => {
+                   Receta.find(params).then(datos => {
                         if (datos.data.length !== 0) {
                             this.controlPaginas = datos.data.length;
                             this.pagina++;

@@ -1,12 +1,12 @@
 export const ENDPOINTS = {
   development: {
-    product: 'http://localhost:3000/api'
+    product: 'http://localhost:3000/'
   },
   staging: {
-    product: 'http://localhost:3000/api'
+    product: 'http://localhost:3000/'
   },
   production: {
-    product: '/api'
+    product: '/'
   },
   getURL( service )  {
     let env = process.env.NODE_ENV;
