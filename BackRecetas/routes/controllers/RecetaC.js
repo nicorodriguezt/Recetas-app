@@ -10,11 +10,11 @@ module.exports = function(passport) {
         RecetaService.addReceta(req, res);
     });
 
-    router.get('/find', passport.Autenticado, function (req,res) {
+    router.get('/find', function (req,res) {
         RecetaService.buscarRecetas(req, res);
     });
 
-    router.get('/verReceta/:id', passport.Autenticado, function (req,res) {
+    router.get('/verReceta/:id', function (req,res) {
         RecetaService.verReceta(req,res)
     });
 
