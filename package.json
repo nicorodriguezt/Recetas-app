@@ -17,7 +17,7 @@
     "build:web": "cd FrontRecetas && npm run build",
     "build:rest": "cd FrontRecetas/dist && rm -fr ../../BackRecetas/client/* && cp -a * ../../BackRecetas/client",
     "build": "npm run build:web && npm run build:rest",
-    "heroku": "cd BackRecetas && node ."
+    "heroku": "cd BackRecetas && node ./bin/www"
   },
   "author": "",
   "license": "ISC",
