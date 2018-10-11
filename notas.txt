@@ -1,0 +1,12 @@
+scrips:{
+"init": npm install
+"test:web": cd Recetas-Vue && npm run lint
+"test:rest": cd TrabajoFinalBack && npm run test
+"test": npm run test:web && npm run test:rest
+
+"build:web": cd Recetas-Vue && npm run build
+"build:rest": cd Recetas-Vue/dist && cp -a * ../../TrabajoFinalBack/client
+"build": npm run build:web && npm run build:rest
+
+"start": npm run build && cd TrabajoFinalBack && npm start
+}
