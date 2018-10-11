@@ -7,15 +7,15 @@
     "node": ">=4"
   },
   "scripts": {
-    "init:web": "cd Recetas-vue && npm install",
+    "init:web": "cd Recetas-Vue && npm install",
     "init:rest": "cd TrabajoFinalBack && npm install",
     "init": "npm run init:web && npm run init:rest",
     "postinstall": "npm run init",
-    "test:web": "cd Recetas-vue && npm run lint",
+    "test:web": "cd Recetas-Vue && npm run lint",
     "test:rest": "cd TrabajoFinalBack && npm run test",
     "test": "npm run init&& npm run test:web && npm run test:rest",
-    "build:web": "cd Recetas-vue && npm run build",
-    "build:rest": "cd Recetas-vue/dist && rm -fr ../../TrabajoFinalBack/client/* && cp -a * ../../TrabajoFinalBack/client",
+    "build:web": "cd Recetas-Vue && npm run build",
+    "build:rest": "cd Recetas-Vue/dist && rm -fr ../../TrabajoFinalBack/client/* && cp -a * ../../TrabajoFinalBack/client",
     "build": "npm run build:web && npm run build:rest",
     "heroku": "cd TrabajoFinalBack && node ."
   },
