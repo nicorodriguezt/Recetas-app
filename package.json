@@ -11,7 +11,7 @@
     "init:rest": "cd BackRecetas && npm install",
     "init": "npm run init:web && npm run init:rest",
     "postinstall": "npm run init",
-    "test:web": "cd FrontRecetas && npm run lint && npm run test:unit",
+    "test:web": "cd FrontRecetas && npm run lint",
     "test:rest": "cd BackRecetas && npm run test",
     "test": "npm run init&& npm run test:web && npm run test:rest",
     "build:web": "cd FrontRecetas && npm run build",
