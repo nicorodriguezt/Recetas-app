@@ -6,10 +6,10 @@ export const ENDPOINTS = {
     product: 'http://localhost:3000/'
   },
   production: {
-    product: '/'
+    product: '/api'
   },
   test:{
-    product:'/'
+    product:'/api'
   },
   getURL( service )  {
     let env = process.env.NODE_ENV;
