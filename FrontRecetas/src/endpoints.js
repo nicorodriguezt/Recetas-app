@@ -6,20 +6,20 @@ export const ENDPOINTS = {
     product: 'http://localhost:3000/'
   },
   production: {
-    product: '/api'
+    product: '/'
   },
   test:{
-    product:'/api'
+    product:'/'
   },
   getURL( service )  {
     let env = process.env.NODE_ENV;
     let environment= this;
-    console.log('Environment:' +env);
-    console.log('Servicio:' +service);
+   // console.log('Environment:' +env);
+   // console.log('Servicio:' +service);
     if( !environment[env] )
       throw 'Environment not found';
     
-    console.log(`CurrentEndpoint: ${environment[env].product}`);
+   // console.log(`CurrentEndpoint: ${environment[env].product}`);
     return environment[env][service];
   }
 }

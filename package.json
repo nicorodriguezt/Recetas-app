@@ -14,11 +14,11 @@
     "test:web": "cd FrontRecetas && npm run lint",
     "test:rest": "cd BackRecetas && npm run test",
     "test": "npm run init&& npm run test:web && npm run test:rest",
-    "build:web": "cd FrontRecetas && npm run build",
+    "build:web": "cd FrontRecetas && npm run build --prod",
     "build:rest": "cd FrontRecetas/dist && rm -fr ../../BackRecetas/client/* && cp -a * ../../BackRecetas/client",
     "build": "npm run build:web && npm run build:rest",
     "heroku": "cd BackRecetas && node ./bin/www",
-    "local:web": "cd FrontRecetas && npm run serve",
+    "local:web": "cd FrontRecetas && npm run build --prod",
     "local:rest": "cd BackRecetas && node ./bin/www",
     "local": "npm run local:web && npm run local:rest"
   },
